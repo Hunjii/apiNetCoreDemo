@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D4JUfBp0emub6N00z/d9Ls18DG83u7KOTfuCDz7n6e6DIorUmqmkR7KuuPQ9UrQsfWu29GhJxx35e6w9Si7b2w==",
+  "dgSpecHash": "oMyQCpNM8sJIRMJBahqoJU6C6xd1CDb2vyPwmy4IBcAhEj639cPjRNHw6qXRnzz/u4oA43Mi8H+W1HkgQB9qCw==",
   "success": true,
   "projectFilePath": "D:\\NVH\\apiNotCore\\apiNotCore.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\NVHUNG\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.5\\microsoft.aspnetcore.jsonpatch.3.1.5.nupkg.sha512",
+    "C:\\Users\\NVHUNG\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\NVHUNG\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

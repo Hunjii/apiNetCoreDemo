@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ApiDemo.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace apiNotCore.Controllers
@@ -94,11 +95,20 @@ namespace apiNotCore.Controllers
         [HttpPatch("{id}")]
         public IActionResult Update(int id, [FromBody] JsonPatchDocument<Product> patchDoc){
             if (patchDoc == null)
-                {
-                    return BadRequest();
-                }
-            var product = listProd.Find(x => x.ID == id);
+            {
+                return BadRequest();
+            }
             
+            var product = listProd.Find(x => x.ID == id);
+
+            patchDoc.ApplyTo(product);
+
+            var prod = listProd.Where(i=> i.ID == product.ID).First();
+            var index = listProd.IndexOf(prod);
+
+            if(index != -1) listProd[index] = product;
+            
+            return NoContent();
         }
 
     }
